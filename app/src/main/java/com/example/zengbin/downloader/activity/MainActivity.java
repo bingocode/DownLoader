@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.zengbin.downloader.R;
+import com.example.zengbin.downloader.ui.IndiaPayDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,8 +19,14 @@ public class MainActivity extends AppCompatActivity {
     public void opendl(View v){
         switch (v.getId()){
             case R.id.photo_bt:
-                startActivity(new Intent(this,PhotoDLActivity.class));break;
-
+                showdialog();break;
+            case R.id.list_bt:
+                startActivity(new Intent(MainActivity.this,HistoryListActivity.class));break;
         }
+    }
+
+    private void showdialog(){
+        IndiaPayDialog indiaPayDialog = new IndiaPayDialog(this);
+        indiaPayDialog.show();
     }
 }

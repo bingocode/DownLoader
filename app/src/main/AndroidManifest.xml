@@ -21,7 +21,8 @@
             android:name=".service.DownLoaderService"
             android:exported="false" />
 
-        <activity android:name=".activity.PhotoDLActivity"></activity>
+        <activity android:name=".activity.PhotoDLActivity" />
+        <activity android:name=".activity.HistoryListActivity"></activity>
     </application>
 
 </manifest>
